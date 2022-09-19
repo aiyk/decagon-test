@@ -1,0 +1,46 @@
+Menu{
+    width: 22px;
+}
+.sidenav{
+    width: 94px;
+    height: 100vh;
+    background: #FBFAFF;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px 0;
+}
+.appIcon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.appIcon img{
+    width: 32px;
+    margin-bottom: 10px;
+}
+.appIcon__label{
+    font-size: 16px;
+    color: #005555;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 21px;
+    display: block;
+}
+.sidenav__links{
+    margin-top: 150px;
+}
+.sidenav__link{
+    border-radius: 14px;
+    width: 46px;
+    height: 45px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.sidenav__link:hover{
+    box-shadow: 0px 8px 14px rgba(62, 107, 224, 0.12);
+    background: #005555;
+}
