@@ -26,3 +26,8 @@ export { default as user2 } from './user2.jpg'
 export { default as user3 } from './user3.png'
 export { default as user4 } from './user4.jpg'
 export { default as pfp } from './pfp.png'
+
+
+export { default as lineGraph1 } from './line-graph1.svg'
+export { default as lineGraph2 } from './line-graph2.svg'
+export { default as lineGraph3 } from './line-graph3.svg'

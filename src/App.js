@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter } from "react-router-dom"
 import "./App.css"
 
 import { AppHeader, SideNav } from "./components"
-import { Dasboard } from "./pages"
+import { Dashboard } from "./pages"
 
-import { Schedule1, Schedule2, CaretLeft, CaretRight, emoji, user1, user2, user3, user4, CaretRightWhite } from './assets'
+import { Schedule1, Schedule2, CaretLeft, CaretRight, emoji, user1, user2, user4, CaretRightWhite } from './assets'
 
 const App = () => {
   return (
@@ -17,10 +17,7 @@ const App = () => {
                 <AppHeader />
                 <div className='app__body'>
                   <div className='app__body__contentArea'>
-                    <Routes>
-                      <Route path="/" element="Dasboard"></Route>
-                      <Route path="/dashboard" element="Dasboard"></Route>
-                    </Routes>
+                    <Dashboard />
                   </div>
                   <div className='app__body__rightTab'>
                     <div className='app__body__rightTab__header'>

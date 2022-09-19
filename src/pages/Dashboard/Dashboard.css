@@ -1,0 +1,66 @@
+.db{
+    width: 100%;
+}
+.db__stats{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 21px;
+}
+.db__stats__stat{
+    width: 31%;
+    height: 173px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 20px;
+}
+.db__stats__stat__header{
+    width: 100%;
+    border-bottom: 1px solid #E8EDF1;
+    padding-bottom: 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.db__stats__stat__header__icon{
+    width: 34px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F3F7FD;
+}
+.db__stats__stat__header__label{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #8C97A8;
+}
+.db__stats__stat__header__count{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 29px;
+    color: #1E1E1E;
+}
+.db__stats__stat__body{
+    width: 100%;
+    display: flex;
+}
+.db__stats__stat__body__graph, .db__stats__stat__body__graph{
+    width: 50%;
+}
+.db__stats__stat__body__graph img{
+    width: 100%;
+}
+.db__stats__stat__body__graphData{
+    text-align: right;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #768396;
+}
+.db__stats__stat__body__graphData__item span{
+    font-weight: 700;
+    color: #299702;
+}
