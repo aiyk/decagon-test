@@ -1,13 +1,31 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { BrowserRouter } from "react-router-dom"
 import "./App.css"
 
-import { AppHeader, SideNav } from "./components"
+import { AppHeader, SideNav, FormInput } from "./components"
 import { Dashboard } from "./pages"
+import { useStateContext } from './contexts/ContextProvider'
+import {useState, useRef} from 'react';
 
 import { Schedule1, Schedule2, CaretLeft, CaretRight, emoji, user1, user2, user4, CaretRightWhite } from './assets'
 
 const App = () => {
+
+  const { todos, setTodo, collaborators, setCollaborators } = useStateContext();
+
+  const [contributors, setContributors] = useState([]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const data = new FormData(e.target)
+    let todo = Object.fromEntries(data.entries())
+    todo.id = todos.length
+    todo.status = 'New'
+    setTodo([...todos, todo])
+    console.log(todos)
+  }
+
   return (
     <div>
         <BrowserRouter>
@@ -19,7 +37,7 @@ const App = () => {
                   <div className='app__body__contentArea'>
                     <Dashboard />
                   </div>
-                  <div className='app__body__rightTab'>
+                  <form onSubmit={handleSubmit} className='app__body__rightTab'>
                     <div className='app__body__rightTab__header'>
                       <div className='app__body__rightTab__header__title'>Today's Schedule</div>
                       <div className='app__body__rightTab__header__actions'>
@@ -30,10 +48,12 @@ const App = () => {
 
                     <div className='app__body__rightTab__header__title formTitle'>New Task</div>
 
-                    <div className='formInput formInput--fullwidth'>
-                      <label>Task Title</label>
-                      <input type="text" placeholder='Create new' />
-                    </div>
+                    <FormInput 
+                      label="Task Title"  
+                      type="text"
+                      name="title"
+                      placeholder='Create new'
+                    />
 
                     <div className='emojis'>
                       <img src={CaretLeft} alt="link"/>
@@ -70,25 +90,29 @@ const App = () => {
 
                     <div className='liner mb-15'></div>
 
-                    <div className='formInput formInput--fullwidth'>
-                      <label>Time to complete</label>
-                      <input type="date" placeholder='Start date' />
-                    </div>
-
-                    <div className='formInput formInput--fullwidth'>
-                      <input type="date" placeholder='End date' />
-                    </div>
+                    <FormInput 
+                      label="Time to complete"  
+                      type="date"
+                      name="startDate"
+                      placeholder='Start Date' 
+                    />
+                    <FormInput 
+                      type="date"
+                      name="endDate"
+                      placeholder='End Date' 
+                    />
 
                     <div className='liner mb-15'></div>
 
-                    <div className='formInput formInput--fullwidth'>
-                      <label>Hours budgeted</label>
-                      <input type="text" placeholder='Enter hours' />
-                    </div>
+                    <FormInput 
+                      type="number"
+                      name="hoursBudgeted"
+                      placeholder='Enter hours' 
+                    />
 
                     <div className='flexed mb-15'>
                       <div></div>                      
-                      <button className='btn'>Save</button>
+                      <button type='submit' className='btn'>Save</button>
                     </div>
 
                     <div className='liner mb-15'></div>
@@ -118,7 +142,7 @@ const App = () => {
                         <div className='message__userData__msg'>Do you need that design?</div>
                       </div>
                     </div>
-                  </div>
+                  </form>
                 </div>
               </div>
             </div>

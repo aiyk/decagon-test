@@ -1,0 +1,26 @@
+.formInput--fullwidth{
+    width: 100%;
+}
+.formInput{
+    margin-bottom: 16px;
+}
+.formInput label{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #768396;
+    margin-bottom: 18px;
+    display: block;
+}
+.formInput input{
+    height: 40px;
+    background: #E8EDF1;
+    border-radius: 7px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 17px;
+    color: #738383;
+    border: 0;
+    width: 100%;
+    padding: 13px;
+}

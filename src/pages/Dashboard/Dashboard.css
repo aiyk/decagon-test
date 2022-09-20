@@ -64,3 +64,85 @@
     font-weight: 700;
     color: #299702;
 }
+.full-card{
+    min-height: 370px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    margin-bottom: 22px;
+    padding: 24px;
+}
+.full-card__header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 75px;
+}
+.full-card__title{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    color: #005555;
+}
+.full-card__header select{
+    width: 92px;
+    height: 35px;
+    background: #E8EDF1;
+    border: 1px solid #4BA8A8;
+    border-radius: 7px;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 14px;
+    color: #738383;
+    padding: 10px;
+    outline: 0;
+}
+.full-card__header select:focus, .full-card__header select:active{
+    outline: 0;
+}
+table{
+    width: 100%;
+    text-align: left;
+}
+.tr--hasBorder{
+    border-bottom: 1px solid #E8EDF1;
+}
+tr{
+    height: 49px;
+}
+th{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #768396;
+}
+td{
+    font-size: 14px;
+    line-height: 18px;
+    color: #1E1E1E;
+}
+.progress{
+    width: 100%;
+}
+.progress label{
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 14px;
+    color: #4BA8A8;
+}
+.prgressBar{
+    position: relative;
+    width: 150px;
+    height: 5px;
+    background: #E3E8EE;
+    border-radius: 6px;
+    margin-top: 9px;
+}
+.prgressBar__innerBar{
+    position: absolute;
+    width: 102px;
+    height: 5px;
+    left: 0;
+    top: 0;
+    background: #4BA8A8;
+    border-radius: 6px;
+}

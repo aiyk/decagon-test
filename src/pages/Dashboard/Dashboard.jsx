@@ -1,8 +1,13 @@
 import React from 'react'
 import "./Dashboard.css"
-import { Completed, lineGraph1, lineGraph2, lineGraph3 } from '../../assets'
+import { Completed, lineGraph1, lineGraph2, lineGraph3, Options } from '../../assets'
+
+import { useStateContext } from '../../contexts/ContextProvider'
 
 function Dashboard() {
+
+  const { todos } = useStateContext();
+
   return (
     <div className='db'>
       <div className='db__stats'>
@@ -65,6 +70,58 @@ function Dashboard() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className='full-card'></div>
+
+      <div className='full-card'>
+        <div className='full-card__header'>
+          <div className='full-card__title'>Task</div>
+          <select>
+            <option>Last day</option>
+            <option>Last 7 days</option>
+            <option>Last 30 days</option>
+            <option>Last quarter</option>
+            <option>Last year</option>
+          </select>
+        </div>
+
+        <table>
+          <thead>
+            <tr className='tr--hasBorder'>
+              <th>Name Of Task</th>
+              <th>Start Date</th>
+              <th>End Date</th>
+              <th>Hours</th>
+              <th>Progress</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {todos.map(todo => {
+              return(
+                <tr key={todo.id} className='tr--hasBorder'>
+                  <td>{todo.title}</td>
+                  <td>{todo.startDate}</td>
+                  <td>{todo.endDate}</td>
+                  <td>{todo.hoursBudgeted}</td>
+                  <td>
+                    <div className='progress'>
+                      <label>60% completed</label>
+                      <div className='prgressBar'>
+                        <div className='prgressBar__innerBar'></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <img src={Options} alt="link"/>
+                  </td>
+                </tr>
+              )
+            })}
+          </tbody>
+        </table>
       </div>
     </div>
   )

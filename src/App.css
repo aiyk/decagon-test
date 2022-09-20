@@ -6,12 +6,13 @@
 .app__body{
     width: 100%;
     display: flex;
-    height: 100vh;
+    height: calc(100vh - 76px);
 }
 .app__body__contentArea{
     width: calc(100% - 396px);
     padding: 22px 40px;
     background: #F3F4F8;
+    overflow: auto;
 }
 .app__body__rightTab{
     width: 396px;
@@ -49,32 +50,6 @@
 }
 .thebody{
     width: 100%;
-}
-.formInput--fullwidth{
-    width: 100%;
-}
-.formInput{
-    margin-bottom: 16px;
-}
-.formInput label{
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 18px;
-    color: #768396;
-    margin-bottom: 18px;
-    display: block;
-}
-.formInput input{
-    height: 40px;
-    background: #E8EDF1;
-    border-radius: 7px;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 17px;
-    color: #738383;
-    border: 0;
-    width: 100%;
-    padding: 13px;
 }
 .emojis{
     width: 100%;
@@ -159,6 +134,10 @@
     font-size: 14px;
     line-height: 18px;
     text-align: center;
+}
+.btn:disabled{
+    background: #E3E8EE;
+    color: #ffffff;
 }
 .flexed{
     display: flex;

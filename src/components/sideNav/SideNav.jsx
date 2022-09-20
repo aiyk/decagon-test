@@ -4,6 +4,7 @@ import "./SideNav.css"
 import { Menu, Nav0, Nav1, Nav2, Nav3, Nav4, Nav5 } from '../../assets'
 
 function SideNav() {
+
   return (
     <div className='sidenav'>
       <div className='appIcon'>
@@ -12,7 +13,7 @@ function SideNav() {
       </div>
 
       <div className='sidenav__links'>
-        <div className='sidenav__link'>
+        <div className='sidenav__link sidenav__link--active'>
           <img src={Nav0} alt="link"/>
         </div>
         <div className='sidenav__link'>

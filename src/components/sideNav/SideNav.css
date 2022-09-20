@@ -40,7 +40,7 @@ Menu{
     align-items: center;
     margin-bottom: 20px;
 }
-.sidenav__link:hover{
+.sidenav__link:hover, .sidenav__link--active{
     box-shadow: 0px 8px 14px rgba(62, 107, 224, 0.12);
     background: #005555;
 }
